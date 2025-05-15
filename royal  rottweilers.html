@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Rottweilers - Premium Breeder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589941013457-8f0a38582d25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .puppy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .active:after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="#home" class="text-2xl font-bold text-gray-900">
+                            <span class="text-amber-600">Royal</span> Rottweilers
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link active text-gray-900 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">About Us</a>
+                        <a href="#puppies" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Available Puppies</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-gray-100">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About Us</a>
+                <a href="#puppies" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Available Puppies</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto text-center px-6 py-20">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium <span class="text-amber-400">Rottweiler</span> Puppies</h1>
+            <p class="text-xl md:text-2xl mb-8">Bred with love, raised with care. Our Rottweilers are family first, with champion bloodlines and exceptional temperaments.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#puppies" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">View Available Puppies</a>
+                <a href="#about" class="bg-transparent hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300">Learn About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Rottweilers</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We're committed to breeding healthy, well-socialized Rottweilers with excellent temperaments.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Health Guarantee</h3>
+                    <p class="text-gray-600">All our puppies come with a comprehensive health guarantee and are vet-checked before going to their new homes.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Champion Bloodlines</h3>
+                    <p class="text-gray-600">Our breeding dogs come from carefully selected champion bloodlines with excellent conformation and temperament.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Family Raised</h3>
+                    <p class="text-gray-600">Puppies are raised in our home with constant human interaction, ensuring they're well-socialized and family-ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <img src="https://images.unsplash.com/photo-1567752881298-894bb81f9379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Breeder with Rottweiler" class="rounded-xl shadow-lg w-full h-auto">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Royal Rottweilers was founded in 2010 by John and Sarah Thompson, passionate Rottweiler enthusiasts with over 20 years of combined experience in breeding and training these magnificent dogs.</p>
+                    <p class="text-gray-600 mb-6">What began as a hobby quickly grew into a mission to preserve and enhance the Rottweiler breed. We focus on breeding dogs with stable temperaments, excellent health, and the classic Rottweiler appearance that adheres to breed standards.</p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Our Breeding Philosophy</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Health testing for all breeding dogs (hips, elbows, heart, eyes)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Limited breeding to ensure quality over quantity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Early neurological stimulation and socialization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Lifetime support for all our puppy owners</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-4">
+                        <p class="text-gray-800 italic">"Our goal isn't just to sell puppies, but to carefully match each dog with the perfect forever home where they'll thrive as beloved family members."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Our Certifications</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white p-6 rounded-full shadow-md mb-3">
+                            <i class="fas fa-award text-4xl text-amber-600"></i>
+                        </div>
+                        <p class="font-medium text-gray-900">AKC Registered</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white p-6 rounded-full shadow-md mb-3">
+                            <i class="fas fa-heartbeat text-4xl text-amber-600"></i>
+                        </div>
+                        <p class="font-medium text-gray-900">OFA Certified</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white p-6 rounded-full shadow-md mb-3">
+                            <i class="fas fa-shield-alt text-4xl text-amber-600"></i>
+                        </div>
+                        <p class="font-medium text-gray-900">Breeder of Merit</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white p-6 rounded-full shadow-md mb-3">
+                            <i class="fas fa-star text-4xl text-amber-600"></i>
+                        </div>
+                        <p class="font-medium text-gray-900">5-Star Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-amber-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Happy Families, Happy Rottweilers</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Testimonial" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Jessica M.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Our Rottweiler from Royal Rottweilers is the perfect family dog. The breeding and early socialization really shows in his temperament. Couldn't be happier!"</p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Michael T.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"As a first-time Rottweiler owner, I appreciated the thorough guidance and lifetime support. Our dog is healthy, confident, and absolutely stunning."</p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah K.</h4>
+                            <div class="flex text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"We've had Rottweilers for years, but none compare to the quality of Royal Rottweilers' breeding program. The attention to health and temperament is exceptional."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Puppies Section -->
+    <section id="puppies" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Available Puppies</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our current litter of exceptional Rottweiler puppies. All puppies come with AKC registration, health guarantee, and starter kit.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Puppy 1 -->
+                <div class="puppy-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rottweiler puppy" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-bold">Male</div>
+                    </div>
+                    <div classp-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Titan</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">4.7/5 temperament</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Titan is a confident male with excellent markings. He shows great focus during training sessions and loves to cuddle after playtime.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-gray-500 text-sm">DOB: May 15, 2023</p>
+                                <p class="text-gray-900 font-bold text-xl">$2,800</p>
+                            </div>
+                            <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puppy 2 -->
+                <div class="puppy-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1589941013457-8f0a38582d25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rottweiler puppy" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-bold">Female</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Luna</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">5/5 temperament</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Luna is a sweet, gentle female with perfect conformation. She's very people-oriented and shows excellent potential as both family companion and show prospect.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-gray-500 text-sm">DOB: May 12, 2023</p>
+                                <p class="text-gray-900 font-bold text-xl">$3,000</p>
+                            </div>
+                            <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puppy 3 -->
+                <div class="puppy-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Rottweiler puppy" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-bold">Male</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bruno</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-amber-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">4/5 temperament</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Bruno is a playful, energetic male with a bold personality. He's very food-motivated which makes training easy, and he loves water play.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-gray-500 text-sm">DOB: May 18, 2023</p>
+                                <p class="text-gray-900 font-bold text-xl">$2,600</p>
+                            </div>
+                            <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">Don't see the perfect match? Join our waiting list for future litters.</p>
+                <a href="#contact" class="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Join Waiting List</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breed Information -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">About the Rottweiler Breed</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Understanding the characteristics and needs of this noble breed.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Breed Characteristics</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-paw"></i></span>
+                            <span class="text-gray-600"><strong>Temperament:</strong> Confident, courageous, calm, and loyal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-ruler-combined"></i></span>
+                            <span class="text-gray-600"><strong>Size:</strong> Males 24-27" tall, 95-135 lbs; Females 22-25" tall, 80-100 lbs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-bolt"></i></span>
+                            <span class="text-gray-600"><strong>Energy Level:</strong> Moderate to high, requires daily exercise</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-brain"></i></span>
+                            <span class="text-gray-600"><strong>Trainability:</strong> Highly intelligent and eager to please</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-home"></i></span>
+                            <span class="text-gray-600"><strong>Good With:</strong> Proper socialization needed with children and other pets</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Care Requirements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-utensils"></i></span>
+                            <span class="text-gray-600"><strong>Diet:</strong> High-quality large breed formula, 3-4 cups daily (adult)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-broom"></i></span>
+                            <span class="text-gray-600"><strong>Grooming:</strong> Weekly brushing, seasonal shedding</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-walking"></i></span>
+                            <span class="text-gray-600"><strong>Exercise:</strong> Minimum 1-2 hours daily, mental stimulation crucial</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-graduation-cap"></i></span>
+                            <span class="text-gray-600"><strong>Training:</strong> Early socialization and obedience training essential</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2 mt-1"><i class="fas fa-heartbeat"></i></span>
+                            <span class="text-gray-600"><strong>Health:</strong> Prone to hip dysplasia, regular vet checks recommended</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-amber-50 rounded-xl p-8 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Considering a Rottweiler?</h3>
+                <p class="text-gray-700 mb-6 max-w-3xl mx-auto">Rottweilers are magnificent dogs but require committed owners who understand their needs. They thrive with consistent training, socialization, and plenty of exercise. If you're ready for a loyal, intelligent companion who will protect your family with their life, a Rottweiler might be perfect for you.</p>
+                <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Contact Us for Advice</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                    <p class="text-gray-600 mb-8">We'd love to hear from you! Whether you're interested in a puppy, have questions about the breed, or just want to connect with fellow Rottweiler enthusiasts, reach out to us.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-amber-100 p-3 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-amber-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Location</h3>
+                                <p class="text-gray-600">123 Canine Lane, Dogwood Valley, CA 90210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-amber-100 p-3 rounded-lg">
+                                <i class="fas fa-phone-alt text-amber-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Phone</h3>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                                <p class="text-gray-500 text-sm">9am-5pm PST, Monday-Friday</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-amber-100 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-amber-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                                <p class="text-gray-600">info@royalrottweilers.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full text-gray-700 hover:text-amber-600 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full text-gray-700 hover:text-amber-600 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full text-gray-700 hover:text-amber-600 transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="John Smith">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="your@email.com">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="(555) 123-4567">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 text-sm font-medium mb-2">Subject</label>
+                                <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                                    <option value="">Select a subject</option>
+                                    <option value="puppy">Puppy Inquiry</option>
+                                    <option value="breeding">Breeding Information</option>
+                                    <option value="training">Training Questions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="Your message..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Join Our Rottweiler Community</h2>
+            <p class="text-gray-300 mb-6">Subscribe to our newsletter for breeding updates, training tips, and Rottweiler care advice.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900">
+                <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded-r-lg font-medium transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4"><span class="text-amber-400">Royal</span> Rottweilers</h3>
+                    <p class="text-gray-400">Breeding exceptional Rottweilers with champion bloodlines, excellent health, and stable temperaments since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#puppies" class="text-gray-400 hover:text-white transition duration-300">Available Puppies</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Breed Information</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Training Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Health Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Health Guarantee</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contract</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Royal Rottweilers. All rights reserved.</p>
+                <p class="mt-2 text-sm">AKC Registered Breeder | OFA Certified | Breeder of Merit</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Highlight active nav link based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active', 'text-gray-900');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active', 'text-gray-900');
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
